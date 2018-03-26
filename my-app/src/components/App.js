@@ -41,7 +41,6 @@ class App extends Component {
             );
           }}
         </ListDataProvider>
-        <ListItem />
       </div>
     );
   }
