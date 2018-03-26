@@ -1,0 +1,22 @@
+{
+  "name": "test_nick",
+  "version": "1.0.0",
+  "description": "In your favorite language please write a function which calculates a diameter of a given int array. Diameter of the array here is the biggest difference between elements of the array. e.g. [1, 2, 5] -> 4",
+  "main": "array-diameter.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@ssh.github.com:443/jobpal/test_nick.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-formatter-pretty": "^1.3.0",
+    "jest": "^22.4.3"
+  }
+}
