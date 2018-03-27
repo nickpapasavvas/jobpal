@@ -5,7 +5,7 @@ and react-js-pagination.
 
 The application could have been constructed with plain JavaScript using the fetch API to get the data from the server. It also could have been constructed without the use of Redux and Redux-thunk.
 
-The technologies selected were chosen as they allow the creation of large scale applications that otherwise would very difficult to do.
+The technologies selected were chosen as they allow the creation of large scale applications that otherwise would be very difficult to do.
 The same is valid for the React composition patterns that were used (function as a child, higher order components),
 although in this app they are not necessary and rather add complexity, in large scale projects they would simplify things.
 Using a data provider that passes the data it fetches to its children as arguments decouples the data fetching from the presentation of the data, thus allowing the children to consume and present the data however they like. The same is true with the H.O.C. which can now enhance whichever component we want with a loader.
