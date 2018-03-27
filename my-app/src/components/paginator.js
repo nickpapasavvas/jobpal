@@ -6,9 +6,9 @@ import "./paginator.css";
 const Paginator = props => (
   <Pagination
     activePage={props.activePage}
-    itemsCountPerPage={20}
+    itemsCountPerPage={10}
     totalItemsCount={props.totalItemsCount}
-    pageRangeDisplayed={3}
+    pageRangeDisplayed={5}
     onChange={props.onChange}
     innerClass="pagination"
     itemClass="itemClass"
@@ -17,9 +17,9 @@ const Paginator = props => (
 );
 
 Paginator.propTypes = {
-  activePage: PropTypes.string.isRequired,
+  activePage: PropTypes.number.isRequired,
   totalItemsCount: PropTypes.number.isRequired,
-  onChange: PropTypes.function
+  onChange: PropTypes.func
 };
 
 export default Paginator;

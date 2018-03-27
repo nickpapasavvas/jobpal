@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 const LoaderHOC = WrappedComponent => {
   return class LoaderHOC extends Component {
     render() {
-      console.log("InsideHOC", this.props.isFetching);
       return this.props.isFetching ? (
         <Loader />
       ) : (

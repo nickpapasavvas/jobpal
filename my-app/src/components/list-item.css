@@ -1,5 +1,133 @@
-.listItemContainer {
-  width: 200px;
-  height: 120px;
-  background-color: red;
+body {
+  background: #e5ded8;
+  box-sizing: border-box;
+}
+
+/* card container
+------------------------- */
+.card-container {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin: 48px auto;
+  width: 20rem;
+}
+.card-container a {
+  color: #4d4dff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.card-container a:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+/* card header
+------------------------- */
+
+.card-author,
+.card-author--no-cover {
+  margin: 0 auto;
+  padding-top: 0.125rem;
+  width: 80%;
+}
+.card-author h3::before,
+.card-author--no-cover h3::before {
+  background: url("https://image.gala.de/20521380/2x3-620-930/df859631695886ecce7f29896a9e7b25/cf/scarlett-johansson-starportraet--4755513-.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  content: " ";
+  display: inline-block;
+  height: 32px;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 8px;
+  width: 32px;
+}
+.card-author h3 {
+  color: #fff;
+  font-weight: 100;
+}
+.card-author--no-cover h3 {
+  color: #999999;
+  font-weight: 100;
+  text-align: left;
+}
+
+/* card body
+------------------------- */
+.card-body {
+  margin: 0 auto;
+  width: 80%;
+}
+.card-title h3 {
+  color: #333;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.card-summary p {
+  color: #4d4d4d;
+}
+
+.card-summary p::first-letter {
+  text-transform: capitalize;
+  color: red;
+  font-size: 1.5em;
+}
+
+/* card footer
+------------------------- */
+.card-footer {
+  border-top: 1px solid rgb(153, 153, 153);
+  margin: 0 auto;
+  padding-bottom: 0.125rem;
+  width: 80%;
+}
+.card-footer ul {
+  list-style: none;
+  display: flex;
+  flex: row wrap;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+.card-footer li:first-child {
+  margin-right: auto;
+}
+
+.card-footer li {
+  color: #999999;
+  font-size: 0.75rem;
+  height: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.published-date {
+  border: 1px solid #999999;
+  border-radius: 3px;
+  padding: 0 0.5rem;
+}
+.numero {
+  position: relative;
+  top: -0.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .card-container {
+    width: 28rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .card-container {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 959px) {
+  .card-container {
+    width: 50rem;
+  }
 }

@@ -23,7 +23,7 @@ export default LoaderHOC(ListAndPaginator);
 
 ListAndPaginator.displayName = "ListAndPaginator";
 ListAndPaginator.propTypes = {
-  activePage: PropTypes.string.isRequired,
+  activePage: PropTypes.number.isRequired,
   isFetching: PropTypes.bool.isRequired,
   totalItemsCount: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,

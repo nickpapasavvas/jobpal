@@ -37,7 +37,6 @@ export function fetchListData() {
         return response.json();
       })
       .then(json => {
-        console.log("the data are", json);
         dispatch(receiveListData(json));
       });
   };

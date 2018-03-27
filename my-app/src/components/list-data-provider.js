@@ -8,7 +8,6 @@ class ListDataProvider extends Component {
     this.props.dispatch(fetchListData());
   }
   render() {
-    console.log("This.props.listData", this.props.listData);
     return <div> {this.props.children(this.props.listData)}</div>;
   }
 }
@@ -19,13 +18,15 @@ ListDataProvider.propTypes = {
   dispatch: PropTypes.func.isRequired,
   listData: PropTypes.shape({
     isFetching: PropTypes.bool.isRequired,
-    data: PropTypes.arrayOf({
-      postId: PropTypes.number.isRequired,
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired
-    })
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        postId: PropTypes.number.isRequired,
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        body: PropTypes.string.isRequired
+      })
+    )
   })
 };
 
