@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Loader } from "./loader";
+import Loader from "../loader/";
 import PropTypes from "prop-types";
 
 const LoaderHOC = WrappedComponent => {

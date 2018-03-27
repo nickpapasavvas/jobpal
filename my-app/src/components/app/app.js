@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import ListAndPaginator from "./list-and-paginator";
-import ListDataProvider from "./list-data-provider";
-import logo from "../logo.svg";
-import "./App.css";
+import ListAndPaginator from "../list-and-paginator/";
+import DataProvider from "../data-provider/";
+import "./app.css";
 
 class App extends Component {
   static displayName = "App";
@@ -18,10 +17,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Built By Nick Papasavvas</h1>
         </header>
-        <ListDataProvider>
+        <DataProvider>
           {({ isFetching, data }) => {
             if (!isFetching && !data.length) {
               return <p>There are no available data</p>;
@@ -36,7 +34,7 @@ class App extends Component {
               />
             );
           }}
-        </ListDataProvider>
+        </DataProvider>
       </div>
     );
   }

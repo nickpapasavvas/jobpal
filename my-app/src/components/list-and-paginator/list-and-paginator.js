@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import List from "./list";
-import Paginator from "./paginator";
-import LoaderHOC from "./LoaderHOC";
+import List from "../list";
+import Paginator from "../paginator";
+import LoaderHOC from "../loaderHOC";
 
 const ListAndPaginator = props => (
   <React.Fragment>
@@ -19,9 +19,8 @@ const ListAndPaginator = props => (
   </React.Fragment>
 );
 
-export default LoaderHOC(ListAndPaginator);
-
 ListAndPaginator.displayName = "ListAndPaginator";
+
 ListAndPaginator.propTypes = {
   activePage: PropTypes.number.isRequired,
   isFetching: PropTypes.bool.isRequired,
@@ -29,3 +28,5 @@ ListAndPaginator.propTypes = {
   onChange: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
 };
+
+export default LoaderHOC(ListAndPaginator);

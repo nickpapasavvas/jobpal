@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { fetchListData } from "../actions/list-actions";
+import { fetchListData } from "../../actions/list-actions";
 
-class ListDataProvider extends Component {
+class DataProvider extends Component {
   componentDidMount() {
     this.props.dispatch(fetchListData());
   }
   render() {
-    return <div> {this.props.children(this.props.listData)}</div>;
+    return <div> {this.props.children(this.props.data)}</div>;
   }
 }
 
-ListDataProvider.displayName = "ListDataProvider";
-ListDataProvider.propTypes = {
+DataProvider.displayName = "DataProvider";
+DataProvider.propTypes = {
   children: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
-  listData: PropTypes.shape({
+  data: PropTypes.shape({
     isFetching: PropTypes.bool.isRequired,
     data: PropTypes.arrayOf(
       PropTypes.shape({
@@ -30,6 +30,6 @@ ListDataProvider.propTypes = {
   })
 };
 
-const mapStateToProps = state => ({ listData: state.listData });
+const mapStateToProps = state => ({ data: state.listData });
 
-export default connect(mapStateToProps)(ListDataProvider);
+export default connect(mapStateToProps)(DataProvider);

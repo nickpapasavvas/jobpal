@@ -1,7 +1,7 @@
 import React from "react";
 import "./loader.css";
 
-export const Loader = () => (
+const Loader = () => (
   <div className="loader">
     <div className="rect1" />
     <div className="rect2" />
@@ -12,3 +12,5 @@ export const Loader = () => (
 );
 
 Loader.displayName = "Loader";
+
+export default Loader;

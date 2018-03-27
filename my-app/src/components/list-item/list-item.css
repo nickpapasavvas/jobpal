@@ -1,8 +1,3 @@
-body {
-  background: #e5ded8;
-  box-sizing: border-box;
-}
-
 /* card container
 ------------------------- */
 .card-container {
@@ -74,7 +69,7 @@ body {
 
 .card-summary p::first-letter {
   text-transform: capitalize;
-  color: red;
+  color: #42a5f5;
   font-size: 1.5em;
 }
 
