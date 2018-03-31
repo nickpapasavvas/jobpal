@@ -8,7 +8,7 @@ class DataProvider extends Component {
     this.props.dispatch(fetchListData());
   }
   render() {
-    return <div> {this.props.children(this.props.data)}</div>;
+    return <div>{this.props.children(this.props.data)}</div>;
   }
 }
 
@@ -27,6 +27,13 @@ DataProvider.propTypes = {
         body: PropTypes.string.isRequired
       })
     )
+  })
+};
+
+DataProvider.defaultProps = {
+  data: PropTypes.shape({
+    isFetching: false,
+    data: []
   })
 };
 

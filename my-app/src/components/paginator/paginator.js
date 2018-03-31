@@ -19,7 +19,7 @@ const Paginator = props => (
 Paginator.propTypes = {
   activePage: PropTypes.number.isRequired,
   totalItemsCount: PropTypes.number.isRequired,
-  onChange: PropTypes.func
+  onChange: PropTypes.func.isRequired
 };
 
 export default Paginator;

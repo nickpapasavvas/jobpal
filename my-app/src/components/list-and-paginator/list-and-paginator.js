@@ -26,7 +26,19 @@ ListAndPaginator.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   totalItemsCount: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      postId: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired
+    })
+  )
+};
+
+ListAndPaginator.defaultProps = {
+  data: []
 };
 
 export default LoaderHOC(ListAndPaginator);

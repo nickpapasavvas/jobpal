@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ListItem from "../list-item";
 
 const List = props => {
-  let visibleData = props.data.slice(
+  const visibleData = props.data.slice(
     10 * (props.activePage - 1),
     10 * (props.activePage - 1) + 10
   );
@@ -34,6 +34,10 @@ List.propTypes = {
       body: PropTypes.string.isRequired
     })
   )
+};
+
+List.defaultProps = {
+  data: []
 };
 
 export default List;
