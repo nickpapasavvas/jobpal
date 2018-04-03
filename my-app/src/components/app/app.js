@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 import ListAndPaginator from "../list-and-paginator/";
 import DataProvider from "../data-provider/";
 import "./app.css";
@@ -9,7 +11,18 @@ class App extends Component {
     activePage: 1
   };
 
+  componentWillMount() {
+    const activePage = parseInt(this.props.location.search.slice(6), 10) || 1;
+    this.setState({ activePage });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const activePage = parseInt(nextProps.location.search.slice(6), 10) || 1;
+    this.setState({ activePage });
+  }
+
   handlePageChange = pageNumber => {
+    this.props.history.push(`/posts?page=${pageNumber}`);
     this.setState({ activePage: pageNumber });
   };
 
@@ -40,4 +53,13 @@ class App extends Component {
   }
 }
 
-export default App;
+App.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired
+  }).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
+};
+
+export default withRouter(App);

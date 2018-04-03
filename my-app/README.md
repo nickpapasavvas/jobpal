@@ -15,11 +15,11 @@ I used react-js-pagination instead of writing my own paginator.
 
 What this app currently lacks and I may be adding in the future is:
 
-1.  Progressive web app capabilities
-2.  Using the react-router to change the url according to the page displayed and
-    to allow navigation via the browser arrows
-3.  CSS modules
-4.  Testing
+* [ ] Progressive web app capabilities
+* [x] Using the react-router to change the url according to the page displayed and
+      to allow navigation via the browser arrows
+* [ ] CSS modules
+* [ ] Testing
 
 To start the app:
 

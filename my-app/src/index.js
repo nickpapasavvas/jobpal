@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
+import { BrowserRouter } from "react-router-dom";
 import logger from "redux-logger";
 import reduxThunk from "redux-thunk";
 import reducers from "./reducers/";
@@ -21,7 +22,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.querySelector("#root")
 );
