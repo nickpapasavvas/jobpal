@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import ListAndPaginator from "../list-and-paginator/";
 import DataProvider from "../data-provider/";
-import "./app.css";
+import styles from "./app.module.css";
 
 class App extends Component {
   static displayName = "App";
@@ -29,16 +29,16 @@ class App extends Component {
   handlePageChange = pageNumber => {
     this.props.history.push({
       pathname: "/posts",
-      search: `?page=${pageNumber}` 
+      search: `?page=${pageNumber}`
     }); // `/posts?page=${pageNumber}`
     this.setState({ activePage: pageNumber });
   };
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Built By Nick Papasavvas</h1>
+      <div className={styles.app}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>Built By Nick Papasavvas</h1>
         </header>
         <DataProvider>
           {({ isFetching, data }) => {

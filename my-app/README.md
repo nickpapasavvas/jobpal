@@ -18,10 +18,18 @@ What this app currently lacks and I may be adding in the future is:
 * [ ] Progressive web app capabilities
 * [x] Using the react-router to change the url according to the page displayed and
       to allow navigation via the browser arrows
-* [ ] CSS modules
+* [x] CSS modules
+* [ ] Style selected page
 * [ ] Testing
+* [ ] Post details view
+* [ ] Server side rendering
+* [ ] Custom paginator
 
 To start the app:
 
 1.  Run npm install
 2.  Run npm start
+
+Notes: Links on how to use css modules without ejecting
+
+1.  https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196
