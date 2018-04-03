@@ -1,13 +1,13 @@
 import React from "react";
-import "./loader.css";
+import styles from "./loader.module.css";
 
 const Loader = () => (
-  <div className="loader">
-    <div className="rect1" />
-    <div className="rect2" />
-    <div className="rect3" />
-    <div className="rect4" />
-    <div className="rect5" />
+  <div className={styles.loader}>
+    <div className={styles.rect1} />
+    <div className={styles.rect2} />
+    <div className={styles.rect3} />
+    <div className={styles.rect4} />
+    <div className={styles.rect5} />
   </div>
 );
 

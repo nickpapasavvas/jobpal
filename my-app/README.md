@@ -16,12 +16,33 @@ I used react-js-pagination instead of writing my own paginator.
 What this app currently lacks and I may be adding in the future is:
 
 * [ ] Progressive web app capabilities
+      Currently the SW that comes out of the box with C.R.A caches the sceleton of the page
+      To add custom code to the default SW without ejecting:
+
+1.  npm install cra-append-sw
+2.  cra-append-sw [options] <file>
+
 * [x] Using the react-router to change the url according to the page displayed and
       to allow navigation via the browser arrows
-* [ ] CSS modules
+* [x] CSS modules
+* [ ] Style selected page (paginator)
 * [ ] Testing
+* [ ] Post details view
+* [ ] Server side rendering
+* [ ] Custom paginator
 
 To start the app:
 
 1.  Run npm install
 2.  Run npm start
+
+Notes: Links on how to use css modules without ejecting
+
+1.  https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196
+
+To run the production build locally:
+
+1.  Build the production build: npm run build
+2.  npm install -g serve
+3.  serve -s build
+4.  visit localhost:5000
