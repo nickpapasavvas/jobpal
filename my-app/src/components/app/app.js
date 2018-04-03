@@ -11,18 +11,26 @@ class App extends Component {
     activePage: 1
   };
 
-  componentWillMount() {
-    const activePage = parseInt(this.props.location.search.slice(6), 10) || 1;
-    this.setState({ activePage });
+  componentDidMount() {
+    this.updateActivePage(this.props);
   }
 
   componentWillReceiveProps(nextProps) {
-    const activePage = parseInt(nextProps.location.search.slice(6), 10) || 1;
-    this.setState({ activePage });
+    this.updateActivePage(nextProps);
   }
 
+  updateActivePage = props => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+    const query = new URLSearchParams(props.location.search);
+    const activePage = parseInt(query.get("page"), 10) || 1;
+    this.setState({ activePage });
+  };
+
   handlePageChange = pageNumber => {
-    this.props.history.push(`/posts?page=${pageNumber}`);
+    this.props.history.push({
+      pathname: "/posts",
+      search: `?page=${pageNumber}` 
+    }); // `/posts?page=${pageNumber}`
     this.setState({ activePage: pageNumber });
   };
 
