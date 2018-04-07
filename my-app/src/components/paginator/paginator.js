@@ -13,6 +13,7 @@ const Paginator = props => (
     innerClass={styles.pagination}
     itemClass={styles.itemClass}
     linkClass={styles.linkClass}
+    activeLinkClass={styles.activeLinkClass}
   />
 );
 

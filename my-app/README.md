@@ -25,7 +25,7 @@ What this app currently lacks and I may be adding in the future is:
 * [x] Using the react-router to change the url according to the page displayed and
       to allow navigation via the browser arrows
 * [x] CSS modules
-* [ ] Style selected page (paginator)
+* [x] Style selected page (paginator)
 * [ ] Testing
 * [ ] Post details view
 * [ ] Server side rendering
